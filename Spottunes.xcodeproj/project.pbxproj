@@ -86,6 +86,13 @@
 		98F528D31EBA826A000D9BE3 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F528D21EBA826A000D9BE3 /* Track.swift */; };
 		98F528D51EBA88DA000D9BE3 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F528D41EBA88DA000D9BE3 /* Album.swift */; };
 		98F528D71EBA8BC3000D9BE3 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F528D61EBA8BC3000D9BE3 /* Artist.swift */; };
+		B743E9A51EBB051000A0CCD3 /* Spot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B743E9A41EBB051000A0CCD3 /* Spot.storyboard */; };
+		B743E9A81EBB05C000A0CCD3 /* PopularTunesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B743E9A71EBB05C000A0CCD3 /* PopularTunesViewController.swift */; };
+		B743E9AA1EBB1BDD00A0CCD3 /* PopularSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B743E9A91EBB1BDD00A0CCD3 /* PopularSpotViewController.swift */; };
+		B743E9AD1EBB1C4800A0CCD3 /* PopularSpotCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B743E9AB1EBB1C4800A0CCD3 /* PopularSpotCollectionViewCell.swift */; };
+		B743E9AE1EBB1C4800A0CCD3 /* PopularSpotCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B743E9AC1EBB1C4800A0CCD3 /* PopularSpotCollectionViewCell.xib */; };
+		B7F656EF1EBFA57B00B07BFF /* SpotDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F656ED1EBFA57B00B07BFF /* SpotDetailViewController.swift */; };
+		B7F656F01EBFA57B00B07BFF /* SpotDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7F656EE1EBFA57B00B07BFF /* SpotDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -172,6 +179,13 @@
 		98F528D21EBA826A000D9BE3 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		98F528D41EBA88DA000D9BE3 /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		98F528D61EBA8BC3000D9BE3 /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		B743E9A41EBB051000A0CCD3 /* Spot.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Spot.storyboard; sourceTree = "<group>"; };
+		B743E9A71EBB05C000A0CCD3 /* PopularTunesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularTunesViewController.swift; sourceTree = "<group>"; };
+		B743E9A91EBB1BDD00A0CCD3 /* PopularSpotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularSpotViewController.swift; sourceTree = "<group>"; };
+		B743E9AB1EBB1C4800A0CCD3 /* PopularSpotCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularSpotCollectionViewCell.swift; sourceTree = "<group>"; };
+		B743E9AC1EBB1C4800A0CCD3 /* PopularSpotCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopularSpotCollectionViewCell.xib; sourceTree = "<group>"; };
+		B7F656ED1EBFA57B00B07BFF /* SpotDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotDetailViewController.swift; sourceTree = "<group>"; };
+		B7F656EE1EBFA57B00B07BFF /* SpotDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpotDetailViewController.xib; sourceTree = "<group>"; };
 		C5A35C681814C640EE9D42AC /* Pods_Spottunes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spottunes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -369,12 +383,13 @@
 		98A0D2851EA27FEB0004966A /* Spottunes */ = {
 			isa = PBXGroup;
 			children = (
+				B743E9A61EBB059C00A0CCD3 /* PopularTunesView */,
+				B743E9A31EBB04FD00A0CCD3 /* Storyboards */,
 				983578421EAD116600E12751 /* GradientBackgroundAnimatedViewController.swift */,
 				98A0D2861EA27FEB0004966A /* AppDelegate.swift */,
 				98EFBE191EA29E350050675D /* App.swift */,
 				986F070B1EA86C04003806CA /* InitViewController.swift */,
 				9891C4521EBABC4700F4B440 /* SearchView */,
-				98EFBE131EA29DCC0050675D /* Main.storyboard */,
 				9892EED91EAB42EC00AD44B7 /* Client */,
 				98EFBE3A1EA2EE250050675D /* Model */,
 				988E41771EB99D460083A08A /* Select from Playlist */,
@@ -508,6 +523,36 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		B743E9A31EBB04FD00A0CCD3 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				98EFBE131EA29DCC0050675D /* Main.storyboard */,
+				B743E9A41EBB051000A0CCD3 /* Spot.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		B743E9A61EBB059C00A0CCD3 /* PopularTunesView */ = {
+			isa = PBXGroup;
+			children = (
+				B7F656EC1EBFA55E00B07BFF /* SpotDetailView */,
+				B743E9A71EBB05C000A0CCD3 /* PopularTunesViewController.swift */,
+				B743E9A91EBB1BDD00A0CCD3 /* PopularSpotViewController.swift */,
+				B743E9AB1EBB1C4800A0CCD3 /* PopularSpotCollectionViewCell.swift */,
+				B743E9AC1EBB1C4800A0CCD3 /* PopularSpotCollectionViewCell.xib */,
+			);
+			name = PopularTunesView;
+			sourceTree = "<group>";
+		};
+		B7F656EC1EBFA55E00B07BFF /* SpotDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				B7F656ED1EBFA57B00B07BFF /* SpotDetailViewController.swift */,
+				B7F656EE1EBFA57B00B07BFF /* SpotDetailViewController.xib */,
+			);
+			name = SpotDetailView;
+			sourceTree = "<group>";
+		};
 		BADB3D78B37B2B7D8A8FDCE1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -558,11 +603,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
-				ORGANIZATIONNAME = "___Spottunes___";
+				ORGANIZATIONNAME = ___Spottunes___;
 				TargetAttributes = {
 					98A0D2821EA27FEB0004966A = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = 2ATYTS9SNC;
+						DevelopmentTeam = 73WH972W8F;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
@@ -596,14 +641,17 @@
 				9891C4581EBABC5700F4B440 /* LocationSearchTableViewCell.xib in Resources */,
 				98588CC71EB55CE80035C355 /* ProfileHeaderCollectionViewCell.xib in Resources */,
 				9833CB081EB1F289009997E9 /* PlayingTableViewCell.xib in Resources */,
+				B7F656F01EBFA57B00B07BFF /* SpotDetailViewController.xib in Resources */,
 				98EFBE151EA29DCC0050675D /* Main.storyboard in Resources */,
 				98E5EB9E1EAD886F00B0D3D6 /* OnboardingView.xib in Resources */,
 				98A0D2911EA27FEB0004966A /* LaunchScreen.storyboard in Resources */,
 				981A6D4B1EB071BC0045E2FD /* SmartGenreCollectionViewCell.xib in Resources */,
 				98E5EBA31EAE641100B0D3D6 /* RecommendedSpotView.xib in Resources */,
+				B743E9A51EBB051000A0CCD3 /* Spot.storyboard in Resources */,
 				98A0D28E1EA27FEB0004966A /* Assets.xcassets in Resources */,
 				98588CD41EB6A82A0035C355 /* PlayView.xib in Resources */,
 				98588CCF1EB5647D0035C355 /* PlaylistCollectionViewCell.xib in Resources */,
+				B743E9AE1EBB1C4800A0CCD3 /* PopularSpotCollectionViewCell.xib in Resources */,
 				9891C4641EBABD5400F4B440 /* MapViewController.xib in Resources */,
 				98DD95301EB5235F007973D6 /* ListenerTableViewCell.xib in Resources */,
 				98588CBB1EB555950035C355 /* NavigationHeaderView.xib in Resources */,
@@ -657,7 +705,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -691,6 +739,7 @@
 				983578431EAD116600E12751 /* GradientBackgroundAnimatedViewController.swift in Sources */,
 				981A6D441EB054AF0045E2FD /* CollectionHeaderReusableView.swift in Sources */,
 				981A6D361EB048260045E2FD /* OverviewViewController.swift in Sources */,
+				B743E9A81EBB05C000A0CCD3 /* PopularTunesViewController.swift in Sources */,
 				98EFBE271EA29F000050675D /* UIColorExtension.swift in Sources */,
 				98E5EBA01EAD88E800B0D3D6 /* OnboardingView.swift in Sources */,
 				98F528D51EBA88DA000D9BE3 /* Album.swift in Sources */,
@@ -714,12 +763,15 @@
 				9891C4571EBABC5700F4B440 /* LocationSearchTableViewCell.swift in Sources */,
 				986F070E1EA87DBC003806CA /* User.swift in Sources */,
 				986F07101EA87FBA003806CA /* SpotifyClient.swift in Sources */,
+				B743E9AD1EBB1C4800A0CCD3 /* PopularSpotCollectionViewCell.swift in Sources */,
+				B7F656EF1EBFA57B00B07BFF /* SpotDetailViewController.swift in Sources */,
 				988E417B1EB99D990083A08A /* PlaylistTableViewCell.swift in Sources */,
 				98588CD21EB6A81E0035C355 /* PlayView.swift in Sources */,
 				98F528D11EBA6596000D9BE3 /* Tracks.swift in Sources */,
 				98EFBE371EA2E2450050675D /* ListTableViewCell.swift in Sources */,
 				986F070C1EA86C04003806CA /* InitViewController.swift in Sources */,
 				98EFBE1A1EA29E350050675D /* StorybordIdentifier.swift in Sources */,
+				B743E9AA1EBB1BDD00A0CCD3 /* PopularSpotViewController.swift in Sources */,
 				988E41791EB99D700083A08A /* SelectionFromPlaylistViewController.swift in Sources */,
 				9892EED81EA9AA7F00AD44B7 /* URLRequest.swift in Sources */,
 				98588CC11EB55B4E0035C355 /* ProfileViewController.swift in Sources */,
@@ -849,12 +901,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 2ATYTS9SNC;
+				DEVELOPMENT_TEAM = 73WH972W8F;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Spottunes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -878,12 +931,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 2ATYTS9SNC;
+				DEVELOPMENT_TEAM = 73WH972W8F;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Spottunes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
