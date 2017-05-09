@@ -10,14 +10,15 @@ import UIKit
 
 class PopAnimation: NSObject, UIViewControllerAnimatedTransitioning {
     
-    let duration = 1.0
-    var originFrame = CGRect.zero
-    var imageView : UIImageView?
+    let duration = 0.8
+    var originFrame : CGRect?
     var finalFrame : CGRect?
     var transitColor : UIColor?
+    var imageView : UIImageView?
     
-    init(imageView: UIImageView, frame: CGRect,_ color: UIColor = UIColor.black) {
+    init(imageView: UIImageView, frame: CGRect,_ color: UIColor = UIColor.white) {
         self.imageView = imageView
+        self.originFrame = imageView.superview!.convert(imageView.frame, to: nil)
         self.finalFrame = frame
         self.transitColor = color
     }
@@ -29,26 +30,31 @@ class PopAnimation: NSObject, UIViewControllerAnimatedTransitioning {
     public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
         let fromView = transitionContext.view(forKey: .from)!
-        let transitionView = imageView!
+        let transitionView = UIImageView(image: imageView!.image)
+        transitionView.frame = originFrame!
         
-        let xScaleFactor = finalFrame!.width / originFrame.width
-        let yScaleFactor = finalFrame!.height / originFrame.height
+        let canvasView = UIView(frame: CGRect(x: 0, y: 0, width: App.screenWidth, height: App.screenHeight))
+        canvasView.backgroundColor = transitColor
+        fromView.addSubview(canvasView)
+        canvasView.addSubview(transitionView)
+        
+        let xScaleFactor = finalFrame!.width / originFrame!.width
+        let yScaleFactor = finalFrame!.height / originFrame!.height
         let scaleTransform = CGAffineTransform(scaleX: xScaleFactor, y: yScaleFactor)
         
         UIView.animate(withDuration: duration, animations: { 
             transitionView.transform = scaleTransform
             transitionView.frame = self.finalFrame!
-            //fromView.alpha = 0.0
         }) { (_) in
             let containerView = transitionContext.containerView
             let toView = transitionContext.view(forKey: .to)!
-            fromView.backgroundColor = self.transitColor!
             containerView.addSubview(toView)
             toView.alpha = 0.0
-            UIView.animate(withDuration: self.duration, animations: {
+            UIView.animate(withDuration: 0.6, animations: {
                 toView.alpha = 1.0
             }) { (_) in
                 transitionContext.completeTransition(true)
+                canvasView.removeFromSuperview()
             }
         }
     }

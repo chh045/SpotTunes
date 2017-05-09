@@ -14,6 +14,8 @@ class SpotDetailViewController: UIViewController {
 
     @IBOutlet weak var spotImageView: UIImageView!
     
+    var spotImage : UIImage?
+    
     var backVC : UIViewController?
     
     
@@ -21,6 +23,7 @@ class SpotDetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        spotImageView.image = spotImage
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,6 +32,7 @@ class SpotDetailViewController: UIViewController {
     }
     
     @IBAction func onTapBackButton(_ sender: Any) {
+        presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
     
