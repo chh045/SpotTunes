@@ -18,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="206" height="307"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pikachu" translatesAutoresizingMaskIntoConstraints="NO" id="LJw-Se-qvm">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sunset" translatesAutoresizingMaskIntoConstraints="NO" id="LJw-Se-qvm">
                         <rect key="frame" x="0.0" y="0.0" width="206" height="307"/>
                     </imageView>
                 </subviews>
@@ -37,6 +37,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="Pikachu" width="900" height="1290"/>
+        <image name="sunset" width="400" height="400"/>
     </resources>
 </document>

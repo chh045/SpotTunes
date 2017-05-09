@@ -91,6 +91,10 @@
 		B743E9AA1EBB1BDD00A0CCD3 /* PopularSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B743E9A91EBB1BDD00A0CCD3 /* PopularSpotViewController.swift */; };
 		B743E9AD1EBB1C4800A0CCD3 /* PopularSpotCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B743E9AB1EBB1C4800A0CCD3 /* PopularSpotCollectionViewCell.swift */; };
 		B743E9AE1EBB1C4800A0CCD3 /* PopularSpotCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B743E9AC1EBB1C4800A0CCD3 /* PopularSpotCollectionViewCell.xib */; };
+		B7EE015D1EC013C10012234B /* PopAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EE015C1EC013C10012234B /* PopAnimation.swift */; };
+		B7EE01601EC015160012234B /* PopularSpotTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EE015E1EC015160012234B /* PopularSpotTestViewController.swift */; };
+		B7EE01611EC015160012234B /* PopularSpotTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7EE015F1EC015160012234B /* PopularSpotTestViewController.xib */; };
+		B7EE01631EC0339E0012234B /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EE01621EC0339E0012234B /* TestViewController.swift */; };
 		B7F656EF1EBFA57B00B07BFF /* SpotDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F656ED1EBFA57B00B07BFF /* SpotDetailViewController.swift */; };
 		B7F656F01EBFA57B00B07BFF /* SpotDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7F656EE1EBFA57B00B07BFF /* SpotDetailViewController.xib */; };
 /* End PBXBuildFile section */
@@ -184,6 +188,10 @@
 		B743E9A91EBB1BDD00A0CCD3 /* PopularSpotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularSpotViewController.swift; sourceTree = "<group>"; };
 		B743E9AB1EBB1C4800A0CCD3 /* PopularSpotCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularSpotCollectionViewCell.swift; sourceTree = "<group>"; };
 		B743E9AC1EBB1C4800A0CCD3 /* PopularSpotCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopularSpotCollectionViewCell.xib; sourceTree = "<group>"; };
+		B7EE015C1EC013C10012234B /* PopAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopAnimation.swift; sourceTree = "<group>"; };
+		B7EE015E1EC015160012234B /* PopularSpotTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularSpotTestViewController.swift; sourceTree = "<group>"; };
+		B7EE015F1EC015160012234B /* PopularSpotTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopularSpotTestViewController.xib; sourceTree = "<group>"; };
+		B7EE01621EC0339E0012234B /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		B7F656ED1EBFA57B00B07BFF /* SpotDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotDetailViewController.swift; sourceTree = "<group>"; };
 		B7F656EE1EBFA57B00B07BFF /* SpotDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpotDetailViewController.xib; sourceTree = "<group>"; };
 		C5A35C681814C640EE9D42AC /* Pods_Spottunes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spottunes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -383,6 +391,7 @@
 		98A0D2851EA27FEB0004966A /* Spottunes */ = {
 			isa = PBXGroup;
 			children = (
+				B7EE015B1EC0139B0012234B /* Animators */,
 				B743E9A61EBB059C00A0CCD3 /* PopularTunesView */,
 				B743E9A31EBB04FD00A0CCD3 /* Storyboards */,
 				983578421EAD116600E12751 /* GradientBackgroundAnimatedViewController.swift */,
@@ -540,8 +549,19 @@
 				B743E9A91EBB1BDD00A0CCD3 /* PopularSpotViewController.swift */,
 				B743E9AB1EBB1C4800A0CCD3 /* PopularSpotCollectionViewCell.swift */,
 				B743E9AC1EBB1C4800A0CCD3 /* PopularSpotCollectionViewCell.xib */,
+				B7EE015E1EC015160012234B /* PopularSpotTestViewController.swift */,
+				B7EE015F1EC015160012234B /* PopularSpotTestViewController.xib */,
+				B7EE01621EC0339E0012234B /* TestViewController.swift */,
 			);
 			name = PopularTunesView;
+			sourceTree = "<group>";
+		};
+		B7EE015B1EC0139B0012234B /* Animators */ = {
+			isa = PBXGroup;
+			children = (
+				B7EE015C1EC013C10012234B /* PopAnimation.swift */,
+			);
+			name = Animators;
 			sourceTree = "<group>";
 		};
 		B7F656EC1EBFA55E00B07BFF /* SpotDetailView */ = {
@@ -603,7 +623,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
-				ORGANIZATIONNAME = ___Spottunes___;
+				ORGANIZATIONNAME = "___Spottunes___";
 				TargetAttributes = {
 					98A0D2821EA27FEB0004966A = {
 						CreatedOnToolsVersion = 8.3;
@@ -650,6 +670,7 @@
 				B743E9A51EBB051000A0CCD3 /* Spot.storyboard in Resources */,
 				98A0D28E1EA27FEB0004966A /* Assets.xcassets in Resources */,
 				98588CD41EB6A82A0035C355 /* PlayView.xib in Resources */,
+				B7EE01611EC015160012234B /* PopularSpotTestViewController.xib in Resources */,
 				98588CCF1EB5647D0035C355 /* PlaylistCollectionViewCell.xib in Resources */,
 				B743E9AE1EBB1C4800A0CCD3 /* PopularSpotCollectionViewCell.xib in Resources */,
 				9891C4641EBABD5400F4B440 /* MapViewController.xib in Resources */,
@@ -705,7 +726,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -718,7 +739,9 @@
 				981A6D4A1EB071BC0045E2FD /* SmartGenreCollectionViewCell.swift in Sources */,
 				98A0D2871EA27FEB0004966A /* AppDelegate.swift in Sources */,
 				9892EEDB1EAB42FA00AD44B7 /* FoursquareClient.swift in Sources */,
+				B7EE015D1EC013C10012234B /* PopAnimation.swift in Sources */,
 				9891C4591EBABC5700F4B440 /* LocationSearchTableViewController.swift in Sources */,
+				B7EE01631EC0339E0012234B /* TestViewController.swift in Sources */,
 				9833CB071EB1F289009997E9 /* PlayingTableViewCell.swift in Sources */,
 				98588CC61EB55CE80035C355 /* ProfileHeaderCollectionViewCell.swift in Sources */,
 				98EFBE121EA292070050675D /* LogInViewController.swift in Sources */,
@@ -736,6 +759,7 @@
 				981A6D301EB021B80045E2FD /* RecommendationSpotCollectionViewCell.swift in Sources */,
 				9891C4511EBABBF000F4B440 /* TuneSpot.swift in Sources */,
 				98EFBE291EA29F000050675D /* RoundedButton.swift in Sources */,
+				B7EE01601EC015160012234B /* PopularSpotTestViewController.swift in Sources */,
 				983578431EAD116600E12751 /* GradientBackgroundAnimatedViewController.swift in Sources */,
 				981A6D441EB054AF0045E2FD /* CollectionHeaderReusableView.swift in Sources */,
 				981A6D361EB048260045E2FD /* OverviewViewController.swift in Sources */,

@@ -15,6 +15,7 @@ fileprivate let cellNibName = "PopularSpotCollectionViewCell"
 class PopularSpotViewController: UIViewController {
     
     var selectedImageView: UIImageView?
+    var destinationRect : CGRect?
 
 
     @IBOutlet weak var collectionView: UICollectionView!{
@@ -66,6 +67,10 @@ extension PopularSpotViewController : UICollectionViewDelegate, UICollectionView
         
         let vc = SpotDetailViewController(nibName: "SpotDetailViewController", bundle: nil)
         vc.transitioningDelegate = self
+        vc.spotImageView = selectedImageView
+        destinationRect = view.convert(selectedImageView!.frame, to: nil)
+        //leftImageView.superview!.convert(leftImageView.frame, to: nil)
+
         present(vc, animated: true, completion: nil)
     }
 }
@@ -79,11 +84,13 @@ extension PopularSpotViewController : UIViewControllerTransitioningDelegate, RMP
     }
     
     func transitionSourceBackgroundColor() -> UIColor{
-        return UIColor.red
+        return UIColor.gray
     }
     
     func transitionDestinationImageViewFrame() -> CGRect{
-        return self.selectedImageView!.frame
+        //return (selectedImageView?.frame)!
+        return CGRect(x: 30, y: 467, width: 150, height: 150)
+        //return self.destinationRect!
     }
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {

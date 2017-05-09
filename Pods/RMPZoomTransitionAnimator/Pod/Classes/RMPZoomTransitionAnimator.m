@@ -23,8 +23,8 @@
 @implementation RMPZoomTransitionAnimator
 
 // constants for transition animation
-static const NSTimeInterval kForwardAnimationDuration         = 0.3;
-static const NSTimeInterval kForwardCompleteAnimationDuration = 0.2;
+static const NSTimeInterval kForwardAnimationDuration         = 1.0;
+static const NSTimeInterval kForwardCompleteAnimationDuration = 1.0;
 static const NSTimeInterval kBackwardAnimationDuration         = 0.25;
 static const NSTimeInterval kBackwardCompleteAnimationDuration = 0.18;
 

@@ -1,5 +1,5 @@
 //
-//  SpotDetailViewController.swift
+//  TestViewController.swift
 //  Spottunes
 //
 //  Created by Huang Edison on 5/7/17.
@@ -7,30 +7,24 @@
 //
 
 import UIKit
-import RMPZoomTransitionAnimator
 
+class TestViewController: UIViewController {
 
-class SpotDetailViewController: UIViewController {
-
-    @IBOutlet weak var spotImageView: UIImageView!
-    
-    var backVC : UIViewController?
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        let vc = PopularSpotTestViewController(nibName: "PopularSpotTestViewController", bundle: nil)
+        present(vc, animated: true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBAction func onTapBackButton(_ sender: Any) {
-    }
-    
     
 
     /*
@@ -43,20 +37,4 @@ class SpotDetailViewController: UIViewController {
     }
     */
 
-}
-
-extension SpotDetailViewController : RMPZoomTransitionAnimating, RMPZoomTransitionDelegate{
-    func transitionSourceImageView() -> UIImageView{
-        return self.spotImageView!
-    }
-    
-    func transitionSourceBackgroundColor() -> UIColor{
-        return UIColor.gray
-    }
-    
-    func transitionDestinationImageViewFrame() -> CGRect{
-        return CGRect(x: 30, y: 467, width: 150, height: 150)
-        //return self.spotImageView.frame
-    }
-    
 }
